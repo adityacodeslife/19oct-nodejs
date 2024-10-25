@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" ></script>
+</head>
+<body>
+    <div id="content">
+        <p id="message">The Best is yet to come </p>
+    </div>
+    <button onclick="changemessage()"> Change message </button>
+    <button onclick="addnewelement()"> Add new element </button>
+    <script>
+        function changemessage () {
+            let messageElement = document.getElementById("message");
+            messageElement.textcontent= "Message Changed using Textcontent";
+            messageElement.innerHTML+="<br> Added new innerHTML";
+            messageElement.style.color= "blue";
+            messageElement.style.fontsize = "1.2em";
+        }
+
+        function addnewelement() {
+            let contentdiv = document.querySelector ("#content");
+            let newelement = document.createElement("p");
+            newelement.textcontent= " This is a new Paragrapgh added dynamically";
+            newelement.classList.add ("highlight");
+            contentdiv.appendChild(newelement);
+        }
+        
+    </script>
+
+    <hi id="NSA "> Click on me</hi>
+    <button id ="myButton"> Hover over me </button>
+
+    <script>
+        function handleclick () {
+            alert ("You Clicked");
+        }
+        function handlemouseover () {
+            alert ("mouse over!");
+
+        }
+        function handlemouseover() {
+            console.log ("mouse out of the button!!");
+        }
+
+    let pagetitle= document.getelementbyid("pagetitle");
+    let button = document.getElementbyid ("mybutton");
+    pagetitle.addeventlistner ("handleclick",handleclick);
+    button.addeventlistener ("mouseover", handlemouseover);
+    button.addeventlistener("mouseout",handlemouseout);
+    window.onload=handlepageload;
+    
+    </script>
+    
+</body>
+</html>
+
